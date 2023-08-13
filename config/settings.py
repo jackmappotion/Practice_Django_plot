@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "plot_matplotlib.apps.PlotMatplotlibConfig",
+    "plot_seaborn.apps.PlotSeabornConfig",
+    "plot_plotly.apps.PlotPlotlyConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
