@@ -16,13 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from plot_matplotlib.views import visualize_data as matplotlib_visualize_data
 from plot_seaborn.views import visualize_data as seaborn_visualize_data
 from plot_plotly.views import visualize_data as plotly_visualize_data
+from plot_bokeh.views import visualize_date as bokeh_visualize_date
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("matplotlib_visualize/", matplotlib_visualize_data, name="matplotlib_visualize_data"),
     path("seaborn_visualize/", seaborn_visualize_data, name="seaborn_visualize_data"),
     path("plotly_visualize/", plotly_visualize_data, name="plotly_visualize_data"),
+    path("bokeh_visualize/", bokeh_visualize_date, name="bokeh_visualize_date"),
 ]
